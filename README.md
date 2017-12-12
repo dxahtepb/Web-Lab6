@@ -7,7 +7,7 @@
 * Installed nodeJS with nodemon required
 
 1) Clone the repository
-2) Install all dependencies
+2) Install all dependencies ('npm install')
 3) Change config/DB.js to your server
 4) Start the NodeJS server ('nodemon server')
 5) Run ('npm start')
