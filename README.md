@@ -1,0 +1,15 @@
+# Web-Lab6 Markdown document editor
+
+## Chausov Andrey M3305
+
+### Deployment manual
+* Installed and started MongoDB server required
+* Installed nodeJS with nodemon required
+
+1) Clone the repository
+2) Install all dependencies
+3) Change config/DB.js to your server
+4) Start the NodeJS server ('nodemon server')
+5) Run ('npm start')
+6) Webpack development server will start at: http://localhost:3000
+
