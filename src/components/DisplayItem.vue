@@ -33,7 +33,7 @@
 </template>
 
 <script>
-
+    const config = require('../../config/DB');
     export default {
         data(){
             return{
@@ -49,14 +49,14 @@
         methods: {
             fetchItems()
             {
-              let uri = 'http://localhost:4000/items';
+              let uri = 'http://localhost:' + config.port + '/items';
               this.axios.get(uri).then((response) => {
                   this.items = response.data;
               });
             },
             deleteItem(id)
             {
-              let uri = 'http://localhost:4000/items/delete/'+id;
+              let uri = 'http://localhost:' + config.port + '/items/delete/'+id;
               this.items.splice(id, 1);
               this.axios.get(uri);
             }

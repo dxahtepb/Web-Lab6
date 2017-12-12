@@ -46,6 +46,7 @@
 </template>
 <script>
     const marked = require("marked");
+    const config = require('../../config/DB');
     export default {
         data(){
             return{
@@ -59,7 +60,7 @@
         },
         methods: {
             addItem(){
-                let uri = 'http://localhost:4000/items/add';
+                let uri = 'http://localhost:' + config.port + '/items/add';
                 this.axios.post(uri, this.item).then((response) => {
                     this.$router.push({name: 'DisplayItem'})
                 })

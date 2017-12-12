@@ -48,7 +48,7 @@
 
 <script>
     const marked = require("marked");
-
+    const config = require('../../config/DB');
     export default{
         data(){
             return{
@@ -69,7 +69,7 @@
         methods: {
             getItem()
             {
-              let uri = 'http://localhost:4000/items/edit/' + this.$route.params.id;
+              let uri = 'http://localhost:' + config.port + '/items/edit/' + this.$route.params.id;
                 this.axios.get(uri).then((response) => {
                     this.item = response.data;
                 });
@@ -77,7 +77,7 @@
 
             updateItem()
             {
-              let uri = 'http://localhost:4000/items/update/' + this.$route.params.id;
+              let uri = 'http://localhost:' + config.port + '/items/update/' + this.$route.params.id;
                 this.axios.post(uri, this.item).then((response) => {
                   this.$router.push({name: 'DisplayItem'});
                 });
